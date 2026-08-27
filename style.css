@@ -1,0 +1,508 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #faf9f7;
+    color: #222;
+}
+
+/* CABEÇALHO */
+
+.header {
+    width: 100%;
+    height: 75px;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    border-bottom: 1px solid #e5e5e5;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    text-decoration: none;
+    color: #222;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+}
+
+nav a:hover {
+    opacity: 0.6;
+}
+
+.menu-btn {
+    display: none;
+    border: none;
+    background: none;
+    font-size: 28px;
+}
+
+/* BANNER */
+
+.hero {
+    min-height: 520px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #f3eee9, #ffffff);
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.eyebrow {
+    font-size: 12px;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-size: 64px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* BOTÕES */
+
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    background-color: #222;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.secondary {
+    background: transparent;
+    color: #222;
+    border: 1px solid #222;
+}
+
+/* SEÇÕES */
+
+.section {
+    padding: 90px 8%;
+}
+
+.heading {
+    text-align: center;
+    max-width: 650px;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.heading h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.heading p:last-child {
+    color: #666;
+}
+
+/* COLEÇÕES */
+
+.collection {
+    margin-bottom: 70px;
+}
+
+.collection h3 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* CARD DOS PRODUTOS */
+
+.card {
+    background: white;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid #e8e8e8;
+    position: relative;
+}
+
+.photo {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background: #ece8e4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #999;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info {
+    padding: 18px;
+}
+
+.info h4 {
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.card .btn {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* PRODUTO ESGOTADO */
+
+.badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: #222;
+    color: white;
+    padding: 7px 10px;
+    border-radius: 20px;
+    font-size: 10px;
+}
+
+.disabled {
+    background: #d8d8d8;
+    color: #777;
+    pointer-events: none;
+}
+
+/* SOBRE */
+
+.about {
+    background: #f0ebe6;
+    padding: 90px 12%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about h2 {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.about p:last-child {
+    color: #666;
+    font-size: 18px;
+}
+
+/* PAGAMENTO */
+
+.payment {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.payment h2 {
+    font-size: 38px;
+    font-weight: 500;
+}
+
+.payments {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.payments span {
+    background: white;
+    border: 1px solid #ddd;
+    padding: 12px 25px;
+    border-radius: 25px;
+}
+
+/* CONTATO */
+
+.contact {
+    text-align: center;
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* RODAPÉ */
+
+footer {
+    background: white;
+    border-top: 1px solid #e5e5e5;
+    text-align: center;
+    padding: 40px 20px;
+    color: #777;
+}
+
+footer strong {
+    color: #222;
+    font-size: 22px;
+    letter-spacing: 4px;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+/* CELULAR */
+
+@media (max-width: 800px) {
+
+    .menu-btn {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 75px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 25px;
+        text-align: center;
+    }
+
+    nav.open {
+        display: flex;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+        padding: 70px 8%;
+        gap: 30px;
+    }
+}
+
+/* CELULAR PEQUENO */
+
+@media (max-width: 500px) {
+
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 430px;
+    }
+
+    .section {
+        padding: 70px 5%;
+    }
+}
+/* MENU DAS COLEÇÕES */
+
+.collection-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.collection-menu button {
+    background-color: white;
+    color: #222;
+    border: 1px solid #d8d2cd;
+    padding: 12px 24px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.collection-menu button:hover {
+    background-color: #222;
+    color: white;
+}
+
+.collection-menu button.active {
+    background-color: #222;
+    color: white;
+}
+
+
+/* ESCONDER COLEÇÕES */
+
+.collection {
+    display: none;
+}
+
+.collection.active {
+    display: block;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 500px) {
+
+    .collection-menu {
+        gap: 8px;
+    }
+
+    .collection-menu button {
+        padding: 10px 17px;
+        font-size: 13px;
+    }
+
+}
+/* JANELA DE DETALHES DO PRODUTO */
+
+.product-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 9999;
+}
+
+.modal-content {
+    position: relative;
+    background: white;
+    width: 100%;
+    max-width: 700px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    border: none;
+    background: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.modal-content h2 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.modal-images {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.modal-images img {
+    width: 250px;
+    max-width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.modal-price {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.sold-out {
+    display: inline-block;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+
+    .modal-content {
+        padding: 25px 15px;
+    }
+
+    .modal-images img {
+        width: 100%;
+        height: auto;
+        max-height: 350px;
+    }
+
+}
