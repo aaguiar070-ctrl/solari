@@ -302,7 +302,7 @@ const produtos = [
         preco: "49,90",
         tipo: "Pulseiras",
         colecao: "Golden",
-        esgotado: true
+        esgotado: false
     }
 
 ];
