@@ -82,7 +82,7 @@ const produtos = [
         preco: "39,90",
         tipo: "Anéis",
         colecao: "Golden",
-        esgotado: false
+        esgotado: true
     },
 
     {
