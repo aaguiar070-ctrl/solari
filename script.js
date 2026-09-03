@@ -303,6 +303,72 @@ const produtos = [
         tipo: "Pulseiras",
         colecao: "Golden",
         esgotado: false
+    },
+
+
+    // NOVIDADES
+
+    {
+        nome: "Trio de Argolinhas Cravejado",
+        preco: "84,90",
+        tipo: "Brincos",
+        colecao: "Golden",
+        esgotado: false,
+        novidade: true
+    },
+
+    {
+        nome: "Hand Chain Trevo",
+        preco: "39,90",
+        tipo: "Pulseiras",
+        colecao: "Golden",
+        esgotado: false,
+        novidade: true
+    },
+
+    {
+        nome: "Colar Duplo Love",
+        preco: "59,90",
+        tipo: "Colares",
+        colecao: "Golden",
+        esgotado: false,
+        novidade: true
+    },
+
+    {
+        nome: "Colar Celeste",
+        preco: "54,90",
+        tipo: "Colares",
+        colecao: "Golden",
+        esgotado: false,
+        novidade: true
+    },
+
+    {
+        nome: "Pulseira Celeste",
+        preco: "42,90",
+        tipo: "Pulseiras",
+        colecao: "Golden",
+        esgotado: false,
+        novidade: true
+    },
+
+    {
+        nome: "Brinco Love",
+        preco: "39,90",
+        tipo: "Brincos",
+        colecao: "Golden",
+        esgotado: false,
+        novidade: true
+    },
+
+    {
+        nome: "Colar Gravata",
+        preco: "45,90",
+        tipo: "Colares",
+        colecao: "Golden",
+        esgotado: false,
+        novidade: true
     }
 
 ];
@@ -312,6 +378,9 @@ const numeroWhatsApp = "5512996525094";
 
 const areaProdutos =
     document.getElementById("collections");
+
+const areaNovidades =
+    document.getElementById("novidadesProdutos");
 
 const botoesColecao =
     document.querySelectorAll("#collectionMenu button");
@@ -429,6 +498,81 @@ function abrirDetalhes(produto) {
 }
 
 
+/* CRIA O CARD DO PRODUTO */
+
+function criarCard(produto) {
+
+    const nomeArquivo =
+        nomeDaImagem(produto.nome);
+
+    const imagem =
+        `images/${nomeArquivo}.jpeg`;
+
+
+    const card =
+        document.createElement("article");
+
+    card.className =
+        "card";
+
+
+    card.innerHTML = `
+
+        <div class="photo">
+
+            <img
+                src="${imagem}"
+                alt="${produto.nome}"
+                onerror="this.style.display='none'; this.parentElement.innerHTML='ESPAÇO PARA FOTO';"
+            >
+
+        </div>
+
+        <div class="info">
+
+            <h4>
+                ${produto.nome}
+            </h4>
+
+            <div class="price">
+                R$ ${produto.preco}
+            </div>
+
+            ${
+                produto.esgotado
+                ?
+                `<span class="sold-out">
+                    ESGOTADO
+                </span>`
+                :
+                `<button class="btn details-btn">
+                    Ver detalhes
+                </button>`
+            }
+
+        </div>
+
+    `;
+
+
+    if (!produto.esgotado) {
+
+        card
+            .querySelector(".details-btn")
+            .addEventListener("click", function() {
+
+                abrirDetalhes(produto);
+
+            });
+
+    }
+
+
+    return card;
+
+}
+
+
 /* MOSTRA OS PRODUTOS DA CATEGORIA */
 
 function mostrarProdutos(tipo) {
@@ -437,11 +581,17 @@ function mostrarProdutos(tipo) {
 
 
     const produtosFiltrados =
-        produtos.filter(function(produto) {
+        produtos
+            .filter(function(produto) {
 
-            return produto.tipo === tipo;
+                return produto.tipo === tipo;
 
-        });
+            })
+            .sort(function(a, b) {
+
+                return a.esgotado - b.esgotado;
+
+            });
 
 
     const titulo =
@@ -462,78 +612,61 @@ function mostrarProdutos(tipo) {
 
     produtosFiltrados.forEach(function(produto) {
 
-        const nomeArquivo =
-            nomeDaImagem(produto.nome);
-
-        const imagem =
-            `images/${nomeArquivo}.jpeg`;
-
-
-        const card =
-            document.createElement("article");
-
-        card.className =
-            "card";
-
-
-        card.innerHTML = `
-
-            <div class="photo">
-
-                <img
-                    src="${imagem}"
-                    alt="${produto.nome}"
-                    onerror="this.style.display='none'; this.parentElement.innerHTML='ESPAÇO PARA FOTO';"
-                >
-
-            </div>
-
-            <div class="info">
-
-                <h4>
-                    ${produto.nome}
-                </h4>
-
-                <div class="price">
-                    R$ ${produto.preco}
-                </div>
-
-                ${
-                    produto.esgotado
-                    ?
-                    `<span class="sold-out">
-                        ESGOTADO
-                    </span>`
-                    :
-                    `<button class="btn details-btn">
-                        Ver detalhes
-                    </button>`
-                }
-
-            </div>
-
-        `;
-
-
-        if (!produto.esgotado) {
-
-            card
-                .querySelector(".details-btn")
-                .addEventListener("click", function() {
-
-                    abrirDetalhes(produto);
-
-                });
-
-        }
-
-
-        grade.appendChild(card);
+        grade.appendChild(
+            criarCard(produto)
+        );
 
     });
 
 
     areaProdutos.appendChild(grade);
+
+}
+
+
+/* MOSTRA AS NOVIDADES */
+
+function mostrarNovidades() {
+
+    if (!areaNovidades) {
+        return;
+    }
+
+
+    areaNovidades.innerHTML = "";
+
+
+    const produtosNovos =
+        produtos
+            .filter(function(produto) {
+
+                return produto.novidade === true;
+
+            })
+            .sort(function(a, b) {
+
+                return a.esgotado - b.esgotado;
+
+            });
+
+
+    const grade =
+        document.createElement("div");
+
+    grade.className =
+        "products";
+
+
+    produtosNovos.forEach(function(produto) {
+
+        grade.appendChild(
+            criarCard(produto)
+        );
+
+    });
+
+
+    areaNovidades.appendChild(grade);
 
 }
 
@@ -563,6 +696,11 @@ botoesColecao.forEach(function(botao) {
     });
 
 });
+
+
+/* MOSTRA AS NOVIDADES */
+
+mostrarNovidades();
 
 
 /* COMEÇA MOSTRANDO COLARES */
