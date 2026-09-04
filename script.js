@@ -313,7 +313,7 @@ const produtos = [
         preco: "84,90",
         tipo: "Brincos",
         colecao: "Golden",
-        esgotado: false,
+        esgotado: true,
         novidade: true
     },
 
@@ -322,7 +322,7 @@ const produtos = [
         preco: "39,90",
         tipo: "Pulseiras",
         colecao: "Golden",
-        esgotado: false,
+        esgotado: true,
         novidade: true
     },
 
@@ -367,7 +367,7 @@ const produtos = [
         preco: "45,90",
         tipo: "Colares",
         colecao: "Golden",
-        esgotado: false,
+        esgotado: true,
         novidade: true
     }
 
