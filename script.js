@@ -369,7 +369,80 @@ const produtos = [
         colecao: "Golden",
         esgotado: true,
         novidade: true
-    }
+    },
+    // NOVIDADES
+
+{
+    nome: "Conjunto Gota",
+    preco: "69,90",
+    tipo: "Conjuntos",
+    colecao: "Pink",
+    esgotado: false,
+    novidade: true
+},
+
+{
+    nome: "Colar Duplo Riviera + Coração",
+    preco: "79,90",
+    tipo: "Colares",
+    colecao: "Pink",
+    esgotado: false,
+    novidade: true
+},
+
+{
+    nome: "Brinco Love Silver",
+    preco: "44,90",
+    tipo: "Brincos",
+    colecao: "Silver",
+    esgotado: false,
+    novidade: true
+},
+
+{
+    nome: "Conjunto Coração",
+    preco: "64,90",
+    tipo: "Conjuntos",
+    colecao: "Pink",
+    esgotado: false,
+    novidade: true
+},
+
+{
+    nome: "Pulseira Love",
+    preco: "59,90",
+    tipo: "Pulseiras",
+    colecao: "Silver",
+    esgotado: false,
+    novidade: true
+},
+
+{
+    nome: "Anel Solari",
+    preco: "59,90",
+    tipo: "Anéis",
+    colecao: "Pink",
+    esgotado: false,
+    novidade: true
+},
+
+{
+    nome: "Trio Argola",
+    preco: "59,90",
+    tipo: "Brincos",
+    colecao: "Silver",
+    esgotado: false,
+    novidade: true
+},
+
+{
+    nome: "Anel Crystal",
+    preco: "59,90",
+    tipo: "Anéis",
+    colecao: "Crystal",
+    esgotado: false,
+    novidade: true
+},
 
 ];
 
