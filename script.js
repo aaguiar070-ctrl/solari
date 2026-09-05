@@ -286,7 +286,7 @@ const produtos = [
         preco: "64,90",
         tipo: "Conjuntos",
         colecao: "Tumalina",
-        esgotado: false
+        esgotado: true
     },
 
     {
@@ -331,7 +331,7 @@ const produtos = [
         preco: "59,90",
         tipo: "Colares",
         colecao: "Golden",
-        esgotado: false,
+        esgotado: true,
         novidade: true
     },
 
