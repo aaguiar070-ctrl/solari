@@ -377,7 +377,7 @@ const produtos = [
     preco: "69,90",
     tipo: "Conjuntos",
     colecao: "Pink",
-    esgotado: false,
+    esgotado: true,
     novidade: true
 },
 
@@ -413,7 +413,7 @@ const produtos = [
     preco: "59,90",
     tipo: "Pulseiras",
     colecao: "Silver",
-    esgotado: false,
+    esgotado: true,
     novidade: true
 },
 
@@ -422,7 +422,7 @@ const produtos = [
     preco: "59,90",
     tipo: "Anéis",
     colecao: "Pink",
-    esgotado: false,
+    esgotado: true,
     novidade: true
 },
 
