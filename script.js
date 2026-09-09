@@ -527,22 +527,22 @@ function abrirDetalhes(produto) {
 
             ${
                 produto.precoAntigo
-                ?
+               ?
                 `
-                <p class="modal-old-price">
-                    R$ ${produto.precoAntigo}
-                </p>
+            <div class="old-price">
+            R$ ${produto.precoAntigo}
+            </div>
 
-                <p class="modal-price">
-                    R$ ${produto.preco}
-                </p>
+            <div class="price promotion-price">
+            R$ ${produto.preco}
+            </div>
+            `
+            :
                 `
-                :
-                `
-                <p class="modal-price">
-                    R$ ${produto.preco}
-                </p>
-                `
+            <div class="price">
+            R$ ${produto.preco}
+            </div>
+            `
             }
 
             ${
