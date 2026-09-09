@@ -20,7 +20,8 @@ const produtos = [
 
     {
         nome: "Colar Golden Flowers",
-        preco: "74,90",
+        preco: "64,90",
+        precoAntigo: "74,90",
         tipo: "Colares",
         colecao: "Crystal",
         esgotado: false
@@ -50,12 +51,45 @@ const produtos = [
         esgotado: false
     },
 
+    {
+        nome: "Colar Duplo Love",
+        preco: "59,90",
+        tipo: "Colares",
+        colecao: "Golden",
+        esgotado: true
+    },
+
+    {
+        nome: "Colar Celeste",
+        preco: "54,90",
+        tipo: "Colares",
+        colecao: "Golden",
+        esgotado: true
+    },
+
+    {
+        nome: "Colar Gravata",
+        preco: "45,90",
+        tipo: "Colares",
+        colecao: "Golden",
+        esgotado: true
+    },
+
+    {
+        nome: "Colar Duplo Riviera + Coração",
+        preco: "79,90",
+        tipo: "Colares",
+        colecao: "Pink",
+        esgotado: false
+    },
+
 
     // ANÉIS
 
     {
         nome: "Ring Crystal",
-        preco: "59,90",
+        preco: "49,90",
+        precoAntigo: "59,90",
         tipo: "Anéis",
         colecao: "Crystal",
         esgotado: false
@@ -63,7 +97,8 @@ const produtos = [
 
     {
         nome: "Anel Regulável Cravejado",
-        preco: "54,90",
+        preco: "49,90",
+        precoAntigo: "54,90",
         tipo: "Anéis",
         colecao: "Golden",
         esgotado: false
@@ -95,7 +130,8 @@ const produtos = [
 
     {
         nome: "Anel Flower Cravejado",
-        preco: "39,90",
+        preco: "34,90",
+        precoAntigo: "39,90",
         tipo: "Anéis",
         colecao: "Silver",
         esgotado: false
@@ -103,10 +139,27 @@ const produtos = [
 
     {
         nome: "Anel Dedinho Sun",
-        preco: "39,90",
+        preco: "34,90",
+        precoAntigo: "39,90",
         tipo: "Anéis",
         colecao: "Silver",
         esgotado: false
+    },
+
+    {
+        nome: "Anel Solari",
+        preco: "59,90",
+        tipo: "Anéis",
+        colecao: "Pink",
+        esgotado: true
+    },
+
+    {
+        nome: "Anel Crystal",
+        preco: "59,90",
+        tipo: "Anéis",
+        colecao: "Crystal",
+        esgotado: true
     },
 
 
@@ -122,7 +175,8 @@ const produtos = [
 
     {
         nome: "Pulseira Silver Drop",
-        preco: "44,99",
+        preco: "34,90",
+        precoAntigo: "44,99",
         tipo: "Pulseiras",
         colecao: "Pink",
         esgotado: false
@@ -146,7 +200,8 @@ const produtos = [
 
     {
         nome: "Bracelet Light",
-        preco: "39,90",
+        preco: "24,90",
+        precoAntigo: "39,90",
         tipo: "Pulseiras",
         colecao: "Minimalist",
         esgotado: false
@@ -162,7 +217,8 @@ const produtos = [
 
     {
         nome: "Pulseira Double",
-        preco: "34,90",
+        preco: "24,90",
+        precoAntigo: "34,90",
         tipo: "Pulseiras",
         colecao: "Minimalist",
         esgotado: false
@@ -178,10 +234,36 @@ const produtos = [
 
     {
         nome: "Pulseira Baguete Golden Dourada",
-        preco: "49,90",
+        preco: "44,90",
+        precoAntigo: "49,90",
         tipo: "Pulseiras",
         colecao: "Golden",
         esgotado: false
+    },
+
+    {
+        nome: "Mini Baguete Golden",
+        preco: "44,90",
+        precoAntigo: "49,90",
+        tipo: "Pulseiras",
+        colecao: "Golden",
+        esgotado: false
+    },
+
+    {
+        nome: "Pulseira Celeste",
+        preco: "42,90",
+        tipo: "Pulseiras",
+        colecao: "Golden",
+        esgotado: true
+    },
+
+    {
+        nome: "Hand Chain Trevo",
+        preco: "39,90",
+        tipo: "Pulseiras",
+        colecao: "Golden",
+        esgotado: true
     },
 
     {
@@ -194,10 +276,19 @@ const produtos = [
 
     {
         nome: "Bracelet Butterfly Silver",
-        preco: "34,90",
+        preco: "29,90",
+        precoAntigo: "34,90",
         tipo: "Pulseiras",
         colecao: "Silver",
         esgotado: false
+    },
+
+    {
+        nome: "Pulseira Love",
+        preco: "59,90",
+        tipo: "Pulseiras",
+        colecao: "Silver",
+        esgotado: true
     },
 
 
@@ -205,7 +296,8 @@ const produtos = [
 
     {
         nome: "Earring Heart",
-        preco: "39,90",
+        preco: "34,90",
+        precoAntigo: "39,90",
         tipo: "Brincos",
         colecao: "Pink",
         esgotado: true
@@ -221,7 +313,8 @@ const produtos = [
 
     {
         nome: "Brinco Flower",
-        preco: "34,90",
+        preco: "29,90",
+        precoAntigo: "34,90",
         tipo: "Brincos",
         colecao: "Crystal",
         esgotado: false
@@ -229,7 +322,8 @@ const produtos = [
 
     {
         nome: "Brinco Tiffany",
-        preco: "39,90",
+        preco: "29,90",
+        precoAntigo: "39,90",
         tipo: "Brincos",
         colecao: "Minimalist",
         esgotado: false
@@ -238,6 +332,38 @@ const produtos = [
     {
         nome: "Brinco Heart Silver",
         preco: "39,90",
+        tipo: "Brincos",
+        colecao: "Silver",
+        esgotado: false
+    },
+
+    {
+        nome: "Brinco Love",
+        preco: "39,90",
+        tipo: "Brincos",
+        colecao: "Golden",
+        esgotado: false
+    },
+
+    {
+        nome: "Brinco Love Silver",
+        preco: "44,90",
+        tipo: "Brincos",
+        colecao: "Silver",
+        esgotado: false
+    },
+
+    {
+        nome: "Trio de Argolinhas Cravejado",
+        preco: "84,90",
+        tipo: "Brincos",
+        colecao: "Golden",
+        esgotado: true
+    },
+
+    {
+        nome: "Trio Argola",
+        preco: "59,90",
         tipo: "Brincos",
         colecao: "Silver",
         esgotado: false
@@ -298,151 +424,20 @@ const produtos = [
     },
 
     {
-        nome: "Mini Baguete Golden",
-        preco: "49,90",
-        tipo: "Pulseiras",
-        colecao: "Golden",
+        nome: "Conjunto Gota",
+        preco: "69,90",
+        tipo: "Conjuntos",
+        colecao: "Pink",
+        esgotado: true
+    },
+
+    {
+        nome: "Conjunto Coração",
+        preco: "64,90",
+        tipo: "Conjuntos",
+        colecao: "Pink",
         esgotado: false
-    },
-
-
-    // NOVIDADES
-
-    {
-        nome: "Trio de Argolinhas Cravejado",
-        preco: "84,90",
-        tipo: "Brincos",
-        colecao: "Golden",
-        esgotado: true,
-        novidade: true
-    },
-
-    {
-        nome: "Hand Chain Trevo",
-        preco: "39,90",
-        tipo: "Pulseiras",
-        colecao: "Golden",
-        esgotado: true,
-        novidade: true
-    },
-
-    {
-        nome: "Colar Duplo Love",
-        preco: "59,90",
-        tipo: "Colares",
-        colecao: "Golden",
-        esgotado: true,
-        novidade: true
-    },
-
-    {
-        nome: "Colar Celeste",
-        preco: "54,90",
-        tipo: "Colares",
-        colecao: "Golden",
-        esgotado: true,
-        novidade: true
-    },
-
-    {
-        nome: "Pulseira Celeste",
-        preco: "42,90",
-        tipo: "Pulseiras",
-        colecao: "Golden",
-        esgotado: true,
-        novidade: true
-    },
-
-    {
-        nome: "Brinco Love",
-        preco: "39,90",
-        tipo: "Brincos",
-        colecao: "Golden",
-        esgotado: false,
-        novidade: true
-    },
-
-    {
-        nome: "Colar Gravata",
-        preco: "45,90",
-        tipo: "Colares",
-        colecao: "Golden",
-        esgotado: true,
-        novidade: true
-    },
-    // NOVIDADES
-
-{
-    nome: "Conjunto Gota",
-    preco: "69,90",
-    tipo: "Conjuntos",
-    colecao: "Pink",
-    esgotado: true,
-    novidade: true
-},
-
-{
-    nome: "Colar Duplo Riviera + Coração",
-    preco: "79,90",
-    tipo: "Colares",
-    colecao: "Pink",
-    esgotado: false,
-    novidade: true
-},
-
-{
-    nome: "Brinco Love Silver",
-    preco: "44,90",
-    tipo: "Brincos",
-    colecao: "Silver",
-    esgotado: false,
-    novidade: true
-},
-
-{
-    nome: "Conjunto Coração",
-    preco: "64,90",
-    tipo: "Conjuntos",
-    colecao: "Pink",
-    esgotado: false,
-    novidade: true
-},
-
-{
-    nome: "Pulseira Love",
-    preco: "59,90",
-    tipo: "Pulseiras",
-    colecao: "Silver",
-    esgotado: true,
-    novidade: true
-},
-
-{
-    nome: "Anel Solari",
-    preco: "59,90",
-    tipo: "Anéis",
-    colecao: "Pink",
-    esgotado: true,
-    novidade: true
-},
-
-{
-    nome: "Trio Argola",
-    preco: "59,90",
-    tipo: "Brincos",
-    colecao: "Silver",
-    esgotado: false,
-    novidade: true
-},
-
-{
-    nome: "Anel Crystal",
-    preco: "59,90",
-    tipo: "Anéis",
-    colecao: "Crystal",
-    esgotado: true,
-    novidade: true
-},
+    }
 
 ];
 
@@ -452,8 +447,8 @@ const numeroWhatsApp = "5512996525094";
 const areaProdutos =
     document.getElementById("collections");
 
-const areaNovidades =
-    document.getElementById("novidadesProdutos");
+const areaPromocoes =
+    document.getElementById("promocoesProdutos");
 
 const botoesColecao =
     document.querySelectorAll("#collectionMenu button");
@@ -531,9 +526,25 @@ function abrirDetalhes(produto) {
                 Coleção: ${produto.colecao}
             </p>
 
-            <p class="modal-price">
-                R$ ${produto.preco}
-            </p>
+            ${
+                produto.precoAntigo
+                ?
+                `
+                <p class="modal-old-price">
+                    R$ ${produto.precoAntigo}
+                </p>
+
+                <p class="modal-price">
+                    R$ ${produto.preco}
+                </p>
+                `
+                :
+                `
+                <p class="modal-price">
+                    R$ ${produto.preco}
+                </p>
+                `
+            }
 
             ${
                 produto.esgotado
@@ -593,6 +604,16 @@ function criarCard(produto) {
 
         <div class="photo">
 
+            ${
+                produto.precoAntigo
+                ?
+                `<span class="promotion-badge">
+                    PROMOÇÃO
+                </span>`
+                :
+                ""
+            }
+
             <img
                 src="${imagem}"
                 alt="${produto.nome}"
@@ -607,9 +628,25 @@ function criarCard(produto) {
                 ${produto.nome}
             </h4>
 
-            <div class="price">
-                R$ ${produto.preco}
-            </div>
+            ${
+                produto.precoAntigo
+                ?
+                `
+                <div class="old-price">
+                    R$ ${produto.precoAntigo}
+                </div>
+
+                <div class="price promotion-price">
+                    R$ ${produto.preco}
+                </div>
+                `
+                :
+                `
+                <div class="price">
+                    R$ ${produto.preco}
+                </div>
+                `
+            }
 
             ${
                 produto.esgotado
@@ -697,23 +734,23 @@ function mostrarProdutos(tipo) {
 }
 
 
-/* MOSTRA AS NOVIDADES */
+/* MOSTRA AS PROMOÇÕES */
 
-function mostrarNovidades() {
+function mostrarPromocoes() {
 
-    if (!areaNovidades) {
+    if (!areaPromocoes) {
         return;
     }
 
 
-    areaNovidades.innerHTML = "";
+    areaPromocoes.innerHTML = "";
 
 
-    const produtosNovos =
+    const produtosPromocao =
         produtos
             .filter(function(produto) {
 
-                return produto.novidade === true;
+                return produto.precoAntigo !== undefined;
 
             })
             .sort(function(a, b) {
@@ -730,7 +767,7 @@ function mostrarNovidades() {
         "products";
 
 
-    produtosNovos.forEach(function(produto) {
+    produtosPromocao.forEach(function(produto) {
 
         grade.appendChild(
             criarCard(produto)
@@ -739,7 +776,7 @@ function mostrarNovidades() {
     });
 
 
-    areaNovidades.appendChild(grade);
+    areaPromocoes.appendChild(grade);
 
 }
 
@@ -771,9 +808,9 @@ botoesColecao.forEach(function(botao) {
 });
 
 
-/* MOSTRA AS NOVIDADES */
+/* MOSTRA AS PROMOÇÕES */
 
-mostrarNovidades();
+mostrarPromocoes();
 
 
 /* COMEÇA MOSTRANDO COLARES */
