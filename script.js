@@ -440,7 +440,7 @@ const produtos = [
     preco: "59,90",
     tipo: "Anéis",
     colecao: "Crystal",
-    esgotado: false,
+    esgotado: true,
     novidade: true
 },
 
