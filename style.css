@@ -253,6 +253,7 @@ nav a:hover {
 .promotion-price {
     color: #315c43;
     font-size: 21px;
+    font-weight: bold;
 }
 
 .card .btn {
