@@ -22,6 +22,7 @@ const produtos = [
         nome: "Colar Golden Flowers",
         preco: "64,90",
         precoAntigo: "74,90",
+        promocao: true,
         tipo: "Colares",
         colecao: "Crystal",
         esgotado: false
@@ -90,6 +91,7 @@ const produtos = [
         nome: "Ring Crystal",
         preco: "49,90",
         precoAntigo: "59,90",
+        promocao: true,
         tipo: "Anéis",
         colecao: "Crystal",
         esgotado: false
@@ -99,6 +101,7 @@ const produtos = [
         nome: "Anel Regulável Cravejado",
         preco: "49,90",
         precoAntigo: "54,90",
+        promocao: true,
         tipo: "Anéis",
         colecao: "Golden",
         esgotado: false
@@ -132,6 +135,7 @@ const produtos = [
         nome: "Anel Flower Cravejado",
         preco: "34,90",
         precoAntigo: "39,90",
+        promocao: true,
         tipo: "Anéis",
         colecao: "Silver",
         esgotado: false
@@ -141,6 +145,7 @@ const produtos = [
         nome: "Anel Dedinho Sun",
         preco: "34,90",
         precoAntigo: "39,90",
+        promocao: true,
         tipo: "Anéis",
         colecao: "Silver",
         esgotado: false
@@ -177,6 +182,7 @@ const produtos = [
         nome: "Pulseira Silver Drop",
         preco: "34,90",
         precoAntigo: "44,99",
+        promocao: true,
         tipo: "Pulseiras",
         colecao: "Pink",
         esgotado: false
@@ -202,6 +208,7 @@ const produtos = [
         nome: "Bracelet Light",
         preco: "24,90",
         precoAntigo: "39,90",
+        promocao: true,
         tipo: "Pulseiras",
         colecao: "Minimalist",
         esgotado: false
@@ -219,6 +226,7 @@ const produtos = [
         nome: "Pulseira Double",
         preco: "24,90",
         precoAntigo: "34,90",
+        promocao: true,
         tipo: "Pulseiras",
         colecao: "Minimalist",
         esgotado: false
@@ -236,6 +244,7 @@ const produtos = [
         nome: "Pulseira Baguete Golden Dourada",
         preco: "44,90",
         precoAntigo: "49,90",
+        promocao: true,
         tipo: "Pulseiras",
         colecao: "Golden",
         esgotado: false
@@ -245,6 +254,7 @@ const produtos = [
         nome: "Mini Baguete Golden",
         preco: "44,90",
         precoAntigo: "49,90",
+        promocao: true,
         tipo: "Pulseiras",
         colecao: "Golden",
         esgotado: false
@@ -278,6 +288,7 @@ const produtos = [
         nome: "Bracelet Butterfly Silver",
         preco: "29,90",
         precoAntigo: "34,90",
+        promocao: true,
         tipo: "Pulseiras",
         colecao: "Silver",
         esgotado: false
@@ -296,7 +307,7 @@ const produtos = [
 
     {
         nome: "Earring Heart",
-        preco: "34,90",
+        preco: "39,90",
         tipo: "Brincos",
         colecao: "Pink",
         esgotado: true
@@ -314,6 +325,7 @@ const produtos = [
         nome: "Brinco Flower",
         preco: "29,90",
         precoAntigo: "34,90",
+        promocao: true,
         tipo: "Brincos",
         colecao: "Crystal",
         esgotado: false
@@ -323,6 +335,7 @@ const produtos = [
         nome: "Brinco Tiffany",
         preco: "29,90",
         precoAntigo: "39,90",
+        promocao: true,
         tipo: "Brincos",
         colecao: "Minimalist",
         esgotado: false
@@ -526,23 +539,23 @@ function abrirDetalhes(produto) {
             </p>
 
             ${
-                produto.precoAntigo
-               ?
+                produto.promocao
+                ?
                 `
-            <div class="old-price">
-            R$ ${produto.precoAntigo}
-            </div>
+                <div class="old-price">
+                    R$ ${produto.precoAntigo}
+                </div>
 
-            <div class="price promotion-price">
-            R$ ${produto.preco}
-            </div>
-            `
-            :
+                <div class="price promotion-price">
+                    R$ ${produto.preco}
+                </div>
                 `
-            <div class="price">
-            R$ ${produto.preco}
-            </div>
-            `
+                :
+                `
+                <div class="price">
+                    R$ ${produto.preco}
+                </div>
+                `
             }
 
             ${
@@ -604,7 +617,7 @@ function criarCard(produto) {
         <div class="photo">
 
             ${
-                produto.precoAntigo
+                produto.promocao
                 ?
                 `<span class="promotion-badge">
                     PROMOÇÃO
@@ -628,7 +641,7 @@ function criarCard(produto) {
             </h4>
 
             ${
-                produto.precoAntigo
+                produto.promocao
                 ?
                 `
                 <div class="old-price">
@@ -749,7 +762,7 @@ function mostrarPromocoes() {
         produtos
             .filter(function(produto) {
 
-                return produto.precoAntigo !== undefined;
+                return produto.promocao === true;
 
             })
             .sort(function(a, b) {
