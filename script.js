@@ -749,8 +749,7 @@ function mostrarPromocoes() {
         produtos
             .filter(function(produto) {
 
-                return produto.precoAntigo !== undefined &&
-                       pruduto.esgotado === false;
+                return produto.precoAntigo !== undefined;
 
             })
             .sort(function(a, b) {
