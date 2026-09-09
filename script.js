@@ -297,7 +297,6 @@ const produtos = [
     {
         nome: "Earring Heart",
         preco: "34,90",
-        precoAntigo: "39,90",
         tipo: "Brincos",
         colecao: "Pink",
         esgotado: true
