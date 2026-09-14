@@ -354,7 +354,7 @@ const produtos = [
         preco: "39,90",
         tipo: "Brincos",
         colecao: "Golden",
-        esgotado: false
+        esgotado: true
     },
 
     {
