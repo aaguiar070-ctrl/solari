@@ -128,7 +128,7 @@ const produtos = [
         preco: "39,90",
         tipo: "Anéis",
         colecao: "Silver",
-        esgotado: false
+        esgotado: true
     },
 
     {
@@ -148,7 +148,7 @@ const produtos = [
         promocao: true,
         tipo: "Anéis",
         colecao: "Silver",
-        esgotado: false
+        esgotado: true
     },
 
     {
@@ -229,7 +229,7 @@ const produtos = [
         promocao: true,
         tipo: "Pulseiras",
         colecao: "Minimalist",
-        esgotado: false
+        esgotado: true
     },
 
     {
@@ -281,7 +281,7 @@ const produtos = [
         preco: "39,90",
         tipo: "Pulseiras",
         colecao: "Silver",
-        esgotado: true
+        esgotado: false
     },
 
     {
@@ -291,7 +291,7 @@ const produtos = [
         promocao: true,
         tipo: "Pulseiras",
         colecao: "Silver",
-        esgotado: false
+        esgotado: true
     },
 
     {
