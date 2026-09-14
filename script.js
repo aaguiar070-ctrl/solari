@@ -49,7 +49,7 @@ const produtos = [
         preco: "59,90",
         tipo: "Colares",
         colecao: "Minimalist",
-        esgotado: false
+        esgotado: true
     },
 
     {
