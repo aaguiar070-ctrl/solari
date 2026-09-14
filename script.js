@@ -81,7 +81,7 @@ const produtos = [
         preco: "79,90",
         tipo: "Colares",
         colecao: "Pink",
-        esgotado: false
+        esgotado: true
     },
 
 
@@ -94,7 +94,7 @@ const produtos = [
         promocao: true,
         tipo: "Anéis",
         colecao: "Crystal",
-        esgotado: false
+        esgotado: true
     },
 
     {
