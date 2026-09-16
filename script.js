@@ -338,7 +338,7 @@ const produtos = [
         promocao: true,
         tipo: "Brincos",
         colecao: "Minimalist",
-        esgotado: false
+        esgotado: true
     },
 
     {
@@ -346,7 +346,7 @@ const produtos = [
         preco: "39,90",
         tipo: "Brincos",
         colecao: "Silver",
-        esgotado: false
+        esgotado: true
     },
 
     {
