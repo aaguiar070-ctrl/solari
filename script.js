@@ -281,7 +281,7 @@ const produtos = [
         preco: "39,90",
         tipo: "Pulseiras",
         colecao: "Silver",
-        esgotado: false
+        esgotado: true
     },
 
     {
@@ -291,7 +291,7 @@ const produtos = [
         promocao: true,
         tipo: "Pulseiras",
         colecao: "Silver",
-        esgotado: true
+        esgotado: false
     },
 
     {
@@ -362,7 +362,7 @@ const produtos = [
         preco: "44,90",
         tipo: "Brincos",
         colecao: "Silver",
-        esgotado: false
+        esgotado: true
     },
 
     {
