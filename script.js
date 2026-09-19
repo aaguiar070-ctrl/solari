@@ -597,15 +597,6 @@ const produtos = [
     // NOVAS CHOKERS
 
     {
-        nome: "Chocker Pérola",
-        preco: "49,90",
-        tipo: "Chokers",
-        colecao: "Golden",
-        novidade: true,
-        esgotado: false
-    },
-
-    {
         nome: "Chocker Golden Shine",
         preco: "49,90",
         tipo: "Chokers",
