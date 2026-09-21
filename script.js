@@ -73,7 +73,7 @@ const produtos = [
         preco: "45,90",
         tipo: "Colares",
         colecao: "Golden",
-        esgotado: false
+        esgotado: true
     },
 
     {
@@ -119,7 +119,7 @@ const produtos = [
         tipo: "Colares",
         colecao: "Crystal",
         novidade: true,
-        esgotado: false
+        esgotado: true
     },
 
     {
@@ -137,7 +137,7 @@ const produtos = [
         tipo: "Colares",
         colecao: "Pink",
         novidade: true,
-        esgotado: false
+        esgotado: true
     },
 
     {
@@ -164,15 +164,25 @@ const produtos = [
         tipo: "Colares",
         colecao: "Silver",
         novidade: true,
-        esgotado: true
+        esgotado: false
     },
+
+    {
+        nome: "Colar Lumi Silver",
+        preco: "44,90",
+        tipo:"Colares",
+        colecao: "Silver",
+        novidade: true,
+        esgotado: false
+    },
+
     {
          nome: "Colar Triangulo",
         preco: "48,90",
         tipo: "Colares",
         colecao: "Golden",
         novidade: true,
-        esgotado: false
+        esgotado: true
     },
 
 
@@ -275,7 +285,7 @@ const produtos = [
         tipo: "Anéis",
         colecao: "Silver",
         novidade: true,
-        esgotado: true
+        esgotado: false
     },
 
     {
@@ -284,7 +294,7 @@ const produtos = [
         tipo: "Anéis",
         colecao: "Silver",
         novidade: true,
-        esgotado: true
+        esgotado: false
     },
 
     {
@@ -556,7 +566,7 @@ const produtos = [
         tipo: "Brincos",
         colecao: "Silver",
         novidade: true,
-        esgotado: true
+        esgotado: false
     },
 
 
@@ -602,9 +612,17 @@ const produtos = [
         tipo: "Chokers",
         colecao: "Golden",
         novidade: true,
+        esgotado: true
+    },
+    {
+        nome: "Chocker Perola",
+        preco: "49,90",
+        tipo: "Chokers",
+        colecao: "Silver",
+        novidade: true,
         esgotado: false
     },
-
+   
     {
         nome: "Chocker Golden Stars",
         preco: "44,90",
