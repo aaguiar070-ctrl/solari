@@ -239,7 +239,7 @@ const produtos = [
         promocao: true,
         tipo: "Anéis",
         colecao: "Silver",
-        esgotado: false
+        esgotado: true
     },
 
     {
