@@ -92,7 +92,7 @@ const produtos = [
         tipo: "Colares",
         colecao: "Pink",
         novidade: true,
-        esgotado: false
+        esgotado: true
     },
 
     {
@@ -285,7 +285,7 @@ const produtos = [
         tipo: "Anéis",
         colecao: "Silver",
         novidade: true,
-        esgotado: false
+        esgotado: true
     },
 
     {
