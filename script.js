@@ -164,7 +164,7 @@ const produtos = [
         tipo: "Colares",
         colecao: "Silver",
         novidade: true,
-        esgotado: false
+        esgotado: true
     },
 
     {
@@ -294,7 +294,7 @@ const produtos = [
         tipo: "Anéis",
         colecao: "Silver",
         novidade: true,
-        esgotado: false
+        esgotado: true
     },
 
     {
@@ -319,12 +319,12 @@ const produtos = [
 
     {
         nome: "Pulseira Silver Drop",
-        preco: "34,90",
-        precoAntigo: "44,99",
+        preco: "34.90",
+        precoAntigo: "44.99",
         promocao: true,
         tipo: "Pulseiras",
         colecao: "Pink",
-        esgotado: false
+        esgotado: true
     },
 
     {
@@ -566,7 +566,7 @@ const produtos = [
         tipo: "Brincos",
         colecao: "Silver",
         novidade: true,
-        esgotado: false
+        esgotado: true
     },
 
 
