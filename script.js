@@ -670,7 +670,7 @@ const produtos = [
 ];
 
 
-const numeroWhatsApp = "5512996525094";
+const numeroWhatsApp = "5512987019772";
 
 const areaProdutos =
     document.getElementById("collections");
