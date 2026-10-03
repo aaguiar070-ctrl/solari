@@ -289,11 +289,21 @@ const produtos = [
     // ANÉIS ANTIGAS NOVIDADES
 
     {
-        nome: "Anel Lumi Crystal",
+        nome: "Anel Lumi Silver",
         preco: "59,90",
         tipo: "Anéis",
-        colecao: "Crystal",
-        esgotado: false
+        colecao: "Silver",
+        esgotado: false,
+        novidade: true
+    },
+
+      {
+        nome: "Anel Lumi Golden",
+        preco: "59,90",
+        tipo: "Anéis",
+        colecao: "Golden",
+        esgotado: false,
+        novidade: true
     },
 
     {
