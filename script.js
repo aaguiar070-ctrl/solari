@@ -84,14 +84,13 @@ const produtos = [
         esgotado: true
     },
 
-    // NOVOS COLARES
+    // COLARES ANTIGAS NOVIDADES
 
     {
         nome: "Colar Ponto de Luz",
         preco: "49,90",
         tipo: "Colares",
         colecao: "Pink",
-        novidade: true,
         esgotado: true
     },
 
@@ -100,7 +99,6 @@ const produtos = [
         preco: "54,90",
         tipo: "Colares",
         colecao: "Golden",
-        novidade: true,
         esgotado: false
     },
 
@@ -109,7 +107,6 @@ const produtos = [
         preco: "59,90",
         tipo: "Colares",
         colecao: "Silver",
-        novidade: true,
         esgotado: false
     },
 
@@ -118,7 +115,6 @@ const produtos = [
         preco: "49,90",
         tipo: "Colares",
         colecao: "Crystal",
-        novidade: true,
         esgotado: true
     },
 
@@ -127,7 +123,6 @@ const produtos = [
         preco: "59,90",
         tipo: "Colares",
         colecao: "Golden",
-        novidade: true,
         esgotado: false
     },
 
@@ -136,7 +131,6 @@ const produtos = [
         preco: "49,90",
         tipo: "Colares",
         colecao: "Pink",
-        novidade: true,
         esgotado: true
     },
 
@@ -145,7 +139,6 @@ const produtos = [
         preco: "49,90",
         tipo: "Colares",
         colecao: "Golden",
-        novidade: true,
         esgotado: false
     },
 
@@ -154,7 +147,6 @@ const produtos = [
         preco: "49,90",
         tipo: "Colares",
         colecao: "Crystal",
-        novidade: true,
         esgotado: true
     },
 
@@ -163,16 +155,14 @@ const produtos = [
         preco: "54,90",
         tipo: "Colares",
         colecao: "Silver",
-        novidade: true,
         esgotado: true
     },
 
     {
         nome: "Colar Lumi Silver",
-        preco: "44,90",
-        tipo:"Colares",
+        preco:"44,90",
+        tipo: "Colares",
         colecao: "Silver",
-        novidade: true,
         esgotado: false
     },
 
@@ -181,8 +171,36 @@ const produtos = [
         preco: "48,90",
         tipo: "Colares",
         colecao: "Golden",
-        novidade: true,
         esgotado: true
+    },
+
+    // NOVOS COLARES
+
+    {
+        nome: "Colar Riviera",
+        preco: "79,90",
+        tipo: "Colares",
+        colecao: "Pink",
+        novidade: true,
+        esgotado: false
+    },
+
+    {
+        nome: "Colar Bolinhas Inspiração Tiffany",
+        preco: "64,90",
+        tipo: "Colares",
+        colecao: "Minimalist",
+        novidade: true,
+        esgotado: false
+    },
+
+    {
+        nome: "Colar Love Fúcsia",
+        preco: "49,90",
+        tipo: "Colares",
+        colecao: "Pink",
+        novidade: true,
+        esgotado: false
     },
 
 
@@ -268,14 +286,13 @@ const produtos = [
         esgotado: true
     },
 
-    // NOVOS ANÉIS
+    // ANÉIS ANTIGAS NOVIDADES
 
     {
         nome: "Anel Lumi Crystal",
         preco: "59,90",
         tipo: "Anéis",
         colecao: "Crystal",
-        novidade: true,
         esgotado: false
     },
 
@@ -284,7 +301,6 @@ const produtos = [
         preco: "59,90",
         tipo: "Anéis",
         colecao: "Silver",
-        novidade: true,
         esgotado: true
     },
 
@@ -293,7 +309,6 @@ const produtos = [
         preco: "59,90",
         tipo: "Anéis",
         colecao: "Silver",
-        novidade: true,
         esgotado: true
     },
 
@@ -302,7 +317,6 @@ const produtos = [
         preco: "59,90",
         tipo: "Anéis",
         colecao: "Pink",
-        novidade: true,
         esgotado: true
     },
 
@@ -441,13 +455,32 @@ const produtos = [
         esgotado: true
     },
 
-    // NOVA PULSEIRA
+    // PULSEIRA ANTIGA NOVIDADE
 
     {
         nome: "Pulseira Golden Stars",
         preco: "44,50",
         tipo: "Pulseiras",
         colecao: "Golden",
+        esgotado: false
+    },
+
+    // NOVAS PULSEIRAS
+
+    {
+        nome: "Pulseira Riviera",
+        preco: "59,90",
+        tipo: "Pulseiras",
+        colecao: "Pink",
+        novidade: true,
+        esgotado: false
+    },
+
+    {
+        nome: "Pulseira Bolinha Inspiração Tiffany",
+        preco: "54,90",
+        tipo: "Pulseiras",
+        colecao: "Minimalist",
         novidade: true,
         esgotado: false
     },
@@ -531,14 +564,13 @@ const produtos = [
         esgotado: false
     },
 
-    // NOVOS BRINCOS
+    // BRINCOS ANTIGAS NOVIDADES
 
     {
         nome: "Argola Média",
         preco: "39,90",
         tipo: "Brincos",
         colecao: "Silver",
-        novidade: true,
         esgotado: false
     },
 
@@ -547,7 +579,6 @@ const produtos = [
         preco: "49,90",
         tipo: "Brincos",
         colecao: "Golden",
-        novidade: true,
         esgotado: false
     },
 
@@ -556,7 +587,6 @@ const produtos = [
         preco: "39,90",
         tipo: "Brincos",
         colecao: "Silver",
-        novidade: true,
         esgotado: false
     },
 
@@ -565,8 +595,18 @@ const produtos = [
         preco: "49,90",
         tipo: "Brincos",
         colecao: "Silver",
-        novidade: true,
         esgotado: true
+    },
+
+    // NOVO BRINCO
+
+    {
+        nome: "Brinco Gota Cravejado",
+        preco: "49,99",
+        tipo: "Brincos",
+        colecao: "Crystal",
+        novidade: true,
+        esgotado: false
     },
 
 
@@ -604,31 +644,29 @@ const produtos = [
         esgotado: true
     },
 
-    // NOVAS CHOKERS
+    // CHOKERS ANTIGAS NOVIDADES
 
     {
         nome: "Chocker Golden Shine",
         preco: "49,90",
         tipo: "Chokers",
         colecao: "Golden",
-        novidade: true,
         esgotado: true
     },
+
     {
         nome: "Chocker Perola",
         preco: "49,90",
         tipo: "Chokers",
         colecao: "Silver",
-        novidade: true,
         esgotado: false
     },
-   
+
     {
         nome: "Chocker Golden Stars",
         preco: "44,90",
         tipo: "Chokers",
         colecao: "Golden",
-        novidade: true,
         esgotado: false
     },
 
@@ -665,6 +703,17 @@ const produtos = [
         tipo: "Conjuntos",
         colecao: "Pink",
         esgotado: false
+    },
+
+    // NOVO CONJUNTO
+
+    {
+        nome: "Conjunto Love Fúcsia",
+        preco: "64,90",
+        tipo: "Conjuntos",
+        colecao: "Pink",
+        novidade: true,
+        esgotado: false
     }
 
 ];
@@ -688,7 +737,7 @@ const variacoesDourado = [
     { nome: "Crystal", cor: "#ffffff", esgotado: false },
     { nome: "Rosa", cor: "#ffb6c1", esgotado: false },
     { nome: "Fúcsia", cor: "#d6006e", esgotado: false },
-    { nome:  "verde", cor: "#6b8e23", esgotado: false}
+    { nome: "verde", cor: "#6b8e23", esgotado: false}
 ];
 
 

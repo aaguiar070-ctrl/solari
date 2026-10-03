@@ -73,11 +73,11 @@ nav a:hover {
     text-align: center;
     padding: 60px 20px;
 
-    background: linear-gradient(
-        135deg,
-        #e8f1eb,
-        #ffffff
-    );
+    
+    background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75)), url('images/banner.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .hero-content {
