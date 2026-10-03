@@ -719,55 +719,63 @@ function abrirDetalhes(produto) {
     const imagemPrincipal = `images/${nomeArquivo}.jpeg`;
     const imagemSecundaria = `images/${nomeArquivo}-2.jpeg`;
 
-    // Seleciona a lista de cores automaticamente
-    let listaVariacoes = produto.variacoes;
+    // Clona a lista de variações para poder alterar individualmente
+    let listaVariacoesBase = produto.variacoes;
 
-    if (!listaVariacoes) {
+    if (!listaVariacoesBase) {
         const nomeUpper = produto.nome.toUpperCase();
         const colecaoUpper = (produto.colecao || "").toUpperCase();
 
         if (nomeUpper.includes("SILVER") || colecaoUpper.includes("SILVER")) {
-            listaVariacoes = variacoesSilver;
+            listaVariacoesBase = variacoesSilver;
         } else {
-            listaVariacoes = variacoesDourado;
+            listaVariacoesBase = variacoesDourado;
         }
+    }
+
+    // Cria cópia das variações
+    let listaVariacoes = listaVariacoesBase.map(v => ({ ...v }));
+
+    // SE O PRODUTO ESTÁ ESGOTADO NO CATALOGO, MARCA TODAS AS CORES COMO ESGOTADAS
+    if (produto.esgotado) {
+        listaVariacoes.forEach(v => v.esgotado = true);
     }
 
     const janela = document.createElement("div");
     janela.className = "product-modal";
 
-    let htmlVariacoes = "";
-    if (!produto.esgotado) {
-        htmlVariacoes = `<div class="variacoes-container">`;
-        
-        listaVariacoes.forEach((v) => {
-            htmlVariacoes += `
-                <div class="variacao-row" data-nome="${v.nome}">
-                    <div class="variacao-swatch" style="background-color: ${v.cor || '#eee'};">
-                        ${v.imagem ? `<img src="${v.imagem}" style="width:100%; height:100%; object-fit:cover;">` : ''}
-                    </div>
+    let temItemDisponivel = false;
+    let htmlVariacoes = `<div class="variacoes-container">`;
+    
+    listaVariacoes.forEach((v) => {
+        if (!v.esgotado) temItemDisponivel = true;
 
-                    <div class="variacao-details">
-                        <span class="variacao-label">${v.nome}</span>
-                        
-                        ${v.esgotado ? `
-                            <a href="#" class="btn-avise-me" data-variacao="${v.nome}">Avise-me</a>
-                        ` : `
-                            <div class="qty-box">
-                                <span class="qty-val">0</span>
-                                <div class="qty-controls">
-                                    <button type="button" class="qty-btn btn-minus">-</button>
-                                    <button type="button" class="qty-btn btn-plus">+</button>
-                                </div>
-                            </div>
-                        `}
-                    </div>
+        htmlVariacoes += `
+            <div class="variacao-row" data-nome="${v.nome}">
+                <div class="variacao-swatch" style="background-color: ${v.cor || '#eee'};">
+                    ${v.imagem ? `<img src="${v.imagem}" style="width:100%; height:100%; object-fit:cover;">` : ''}
                 </div>
-            `;
-        });
 
-        htmlVariacoes += `</div>`;
-    }
+                <div class="variacao-details">
+                    <span class="variacao-label">${v.nome}</span>
+                    
+                    ${v.esgotado ? `
+                        <a href="#" class="btn-avise-me" data-variacao="${v.nome}">Avise-me</a>
+                    ` : `
+                        <div class="qty-box">
+                            <span class="qty-val">0</span>
+                            <div class="qty-controls">
+                                <button type="button" class="qty-btn btn-minus">-</button>
+                                <button type="button" class="qty-btn btn-plus">+</button>
+                            </div>
+                        </div>
+                    `}
+                </div>
+            </div>
+        `;
+    });
+
+    htmlVariacoes += `</div>`;
 
     janela.innerHTML = `
         <div class="modal-content">
@@ -789,13 +797,16 @@ function abrirDetalhes(produto) {
                 <div class="price">R$ ${produto.preco}</div>
             `}
 
-            ${produto.esgotado ? `
-                <strong class="sold-out">ESGOTADO</strong>
-            ` : `
-                ${htmlVariacoes}
+            ${htmlVariacoes}
+
+            ${temItemDisponivel ? `
                 <button class="btn btn-comprar-whatsapp" style="width: 100%; margin-top: 15px;">
                     Comprar pelo WhatsApp
                 </button>
+            ` : `
+                <p style="color: #c71585; font-size: 14px; font-weight: bold; margin-top: 15px;">
+                    Produto sem estoque no momento. Clique em "Avise-me" na cor desejada para ser notificada!
+                </p>
             `}
         </div>
     `;
@@ -888,6 +899,7 @@ function criarCard(produto) {
     card.innerHTML = `
         <div class="photo">
             ${produto.promocao ? `<span class="promotion-badge">PROMOÇÃO</span>` : ""}
+            ${produto.esgotado ? `<span class="promotion-badge" style="background-color: #555;">ESGOTADO</span>` : ""}
             <img
                 src="${imagem}"
                 alt="${produto.nome}"
@@ -905,19 +917,15 @@ function criarCard(produto) {
                 <div class="price">R$ ${produto.preco}</div>
             `}
 
-            ${produto.esgotado ? `
-                <span class="sold-out">ESGOTADO</span>
-            ` : `
-                <button class="btn details-btn">Ver detalhes</button>
-            `}
+            <button class="btn details-btn" style="${produto.esgotado ? 'background-color: #888;' : ''}">
+                ${produto.esgotado ? 'Avise-me quando chegar' : 'Ver detalhes'}
+            </button>
         </div>
     `;
 
-    if (!produto.esgotado) {
-        card.querySelector(".details-btn").addEventListener("click", function() {
-            abrirDetalhes(produto);
-        });
-    }
+    card.querySelector(".details-btn").addEventListener("click", function() {
+        abrirDetalhes(produto);
+    });
 
     return card;
 }
