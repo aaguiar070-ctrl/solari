@@ -452,7 +452,8 @@ const produtos = [
         preco: "59,90",
         tipo: "Pulseiras",
         colecao: "Silver",
-        esgotado: true
+        esgotado: false,
+        novidade: true
     },
 
     // PULSEIRA ANTIGA NOVIDADE
