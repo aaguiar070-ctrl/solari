@@ -687,7 +687,8 @@ const variacoesSilver = [
 const variacoesDourado = [
     { nome: "Crystal", cor: "#ffffff", esgotado: false },
     { nome: "Rosa", cor: "#ffb6c1", esgotado: false },
-    { nome: "Fúcsia", cor: "#d6006e", esgotado: false }
+    { nome: "Fúcsia", cor: "#d6006e", esgotado: false },
+    { nome:  "verde", cor: "#6b8e23", esgotado: false}
 ];
 
 
