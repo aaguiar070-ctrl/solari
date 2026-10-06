@@ -123,7 +123,7 @@ const produtos = [
         preco: "59,90",
         tipo: "Colares",
         colecao: "Golden",
-        esgotado: false
+        esgotado: true // UPDATED: Esgotado
     },
 
     {
@@ -160,7 +160,7 @@ const produtos = [
 
     {
         nome: "Colar Lumi Silver",
-        preco:"44,90",
+        preco: "44,90",
         tipo: "Colares",
         colecao: "Silver",
         esgotado: false
@@ -174,7 +174,7 @@ const produtos = [
         esgotado: true
     },
 
-    // NOVOS COLARES
+    // NOVOS COLARES E NOVIDADES SOLICITADAS
 
     {
         nome: "Colar Riviera",
@@ -203,6 +203,43 @@ const produtos = [
         esgotado: false
     },
 
+    {
+        nome: "Colar Duplo Golden",
+        preco: "49,90",
+        tipo: "Colares",
+        colecao: "Golden",
+        novidade: true,
+        esgotado: false
+    },
+
+    {
+        nome: "Colar Gravata Love",
+        preco: "44,90",
+        tipo: "Colares",
+        colecao: "Golden",
+        novidade: true,
+        esgotado: false
+    },
+
+    {
+        nome: "Colar Brillance",
+        preco: "49,90",
+        tipo: "Colares",
+        colecao: "Golden",
+        novidade: true,
+        esgotado: false
+    },
+
+    {
+        nome: "Colar Personalizado",
+        preco: "99,90",
+        tipo: "Colares",
+        colecao: "Minimalist",
+        novidade: true,
+        esgotado: false,
+        sobEncomenda: true
+    },
+
 
     // ANÉIS
 
@@ -223,7 +260,7 @@ const produtos = [
         promocao: true,
         tipo: "Anéis",
         colecao: "Golden",
-        esgotado: false
+        esgotado: true // UPDATED: Esgotado
     },
 
     {
@@ -286,24 +323,44 @@ const produtos = [
         esgotado: true
     },
 
-    // ANÉIS ANTIGAS NOVIDADES
-
     {
         nome: "Anel Lumi Silver",
         preco: "59,90",
         tipo: "Anéis",
         colecao: "Silver",
         esgotado: false,
-        novidade: true
+        novidade: true,
+        imagens: [
+            "images/anel-lumi-silver.jpeg",
+            "images/anel-lumi-silver-2.jpeg",
+            "images/anel-lumi-silver-3.jpeg",
+            "images/anel-lumi-silver-4.jpeg",
+            "images/anel-lumi-silver-5.jpeg"
+        ]
     },
 
-      {
+    {
         nome: "Anel Lumi Golden",
         preco: "59,90",
         tipo: "Anéis",
         colecao: "Golden",
         esgotado: false,
-        novidade: true
+        novidade: true,
+        variacoes: [
+            { nome: "Crystal", cor: "#ffffff", esgotado: true }, // Crystal Esgotado
+            { nome: "Rosa", cor: "#ffb6c1", esgotado: false },
+            { nome: "Fúcsia", cor: "#d6006e", esgotado: false },
+            { nome: "Verde", cor: "#6b8e23", esgotado: false }
+        ]
+    },
+
+    {
+        nome: "Anel Shine",
+        preco: "49,90",
+        tipo: "Anéis",
+        colecao: "Golden",
+        novidade: true,
+        esgotado: false
     },
 
     {
@@ -466,8 +523,6 @@ const produtos = [
         novidade: true
     },
 
-    // PULSEIRA ANTIGA NOVIDADE
-
     {
         nome: "Pulseira Golden Stars",
         preco: "44,50",
@@ -475,8 +530,6 @@ const produtos = [
         colecao: "Golden",
         esgotado: false
     },
-
-    // NOVAS PULSEIRAS
 
     {
         nome: "Pulseira Riviera",
@@ -568,6 +621,15 @@ const produtos = [
     },
 
     {
+        nome: "Trio Argolas Cravejadas",
+        preco: "84,90",
+        tipo: "Brincos",
+        colecao: "Golden",
+        novidade: true,
+        esgotado: false
+    },
+
+    {
         nome: "Trio Argola",
         preco: "59,90",
         tipo: "Brincos",
@@ -575,14 +637,30 @@ const produtos = [
         esgotado: false
     },
 
-    // BRINCOS ANTIGAS NOVIDADES
+    {
+        nome: "Brinco Shine",
+        preco: "34,90",
+        tipo: "Brincos",
+        colecao: "Golden",
+        novidade: true,
+        esgotado: false
+    },
+
+    {
+        nome: "Brinco Trevo",
+        preco: "39,90",
+        tipo: "Brincos",
+        colecao: "Golden",
+        novidade: true,
+        esgotado: false
+    },
 
     {
         nome: "Argola Média",
         preco: "39,90",
         tipo: "Brincos",
         colecao: "Silver",
-        esgotado: false
+        esgotado: true // UPDATED: Esgotado
     },
 
     {
@@ -598,7 +676,7 @@ const produtos = [
         preco: "39,90",
         tipo: "Brincos",
         colecao: "Silver",
-        esgotado: false
+        esgotado: true // UPDATED: Esgotado
     },
 
     {
@@ -608,8 +686,6 @@ const produtos = [
         colecao: "Silver",
         esgotado: true
     },
-
-    // NOVO BRINCO
 
     {
         nome: "Brinco Gota Cravejado",
@@ -655,14 +731,13 @@ const produtos = [
         esgotado: true
     },
 
-    // CHOKERS ANTIGAS NOVIDADES
-
     {
         nome: "Chocker Golden Shine",
         preco: "49,90",
         tipo: "Chokers",
         colecao: "Golden",
-        esgotado: true
+        novidade: true,
+        esgotado: false
     },
 
     {
@@ -716,8 +791,6 @@ const produtos = [
         esgotado: false
     },
 
-    // NOVO CONJUNTO
-
     {
         nome: "Conjunto Love Fúcsia",
         preco: "64,90",
@@ -748,7 +821,7 @@ const variacoesDourado = [
     { nome: "Crystal", cor: "#ffffff", esgotado: false },
     { nome: "Rosa", cor: "#ffb6c1", esgotado: false },
     { nome: "Fúcsia", cor: "#d6006e", esgotado: false },
-    { nome: "verde", cor: "#6b8e23", esgotado: false}
+    { nome: "Verde", cor: "#6b8e23", esgotado: false }
 ];
 
 
@@ -772,13 +845,30 @@ function avisarDisponibilidade(produtoNome, variacaoNome) {
 }
 
 
-/* ABRE OS DETALHES DO PRODUTO COM O SELETOR DE VARIANTES */
+/* FUNÇÃO PARA TROCAR A FOTO AO CLICAR NA MINIATURA */
+
+function trocarFotoModal(elThumb, novaSrc) {
+    const imgDestaque = document.getElementById("imgDestaqueModal");
+    if (imgDestaque) {
+        imgDestaque.src = novaSrc;
+    }
+    document.querySelectorAll(".thumb-modal").forEach(t => t.style.borderColor = "#eee");
+    if (elThumb) {
+        elThumb.style.borderColor = "#111";
+    }
+}
+
+
+/* ABRE OS DETALHES DO PRODUTO COM GALERIA INTERATIVA E SELETOR DE VARIANTES */
 
 function abrirDetalhes(produto) {
 
     const nomeArquivo = nomeDaImagem(produto.nome);
-    const imagemPrincipal = `images/${nomeArquivo}.jpeg`;
-    const imagemSecundaria = `images/${nomeArquivo}-2.jpeg`;
+
+    // Lista de fotos do produto (usa o array 'imagens' ou fotos padrão com sufixo)
+    const fotos = produto.imagens && produto.imagens.length > 0 
+        ? produto.imagens 
+        : [`images/${nomeArquivo}.jpeg`, `images/${nomeArquivo}-2.jpeg`, `images/${nomeArquivo}-3.jpeg`];
 
     // Clona a lista de variações para poder alterar individualmente
     let listaVariacoesBase = produto.variacoes;
@@ -797,7 +887,6 @@ function abrirDetalhes(produto) {
     // Cria cópia das variações
     let listaVariacoes = listaVariacoesBase.map(v => ({ ...v }));
 
-    // SE O PRODUTO ESTÁ ESGOTADO NO CATALOGO, MARCA TODAS AS CORES COMO ESGOTADAS
     if (produto.esgotado) {
         listaVariacoes.forEach(v => v.esgotado = true);
     }
@@ -838,16 +927,49 @@ function abrirDetalhes(produto) {
 
     htmlVariacoes += `</div>`;
 
+    // MONTAGEM DA GALERIA CLICÁVEL
+    const fotoInicial = fotos[0];
+    
+    const miniaturasHTML = fotos.length > 1 ? `
+        <div class="modal-thumbs-wrapper" style="display: flex; gap: 8px; margin-top: 10px; justify-content: center; flex-wrap: wrap;">
+            ${fotos.map((f, i) => `
+                <img 
+                    src="${f}" 
+                    alt="${produto.nome}" 
+                    class="thumb-modal"
+                    style="width: 52px; height: 52px; object-fit: cover; border-radius: 6px; cursor: pointer; border: 2px solid ${i === 0 ? '#111' : '#eee'}; transition: border-color 0.2s;"
+                    onclick="trocarFotoModal(this, '${f}')"
+                    onerror="this.style.display='none';"
+                >
+            `).join('')}
+        </div>
+    ` : '';
+
+    const galeriaHTML = `
+        <div class="galeria-modal-container" style="text-align: center; margin-bottom: 15px;">
+            <img 
+                id="imgDestaqueModal" 
+                src="${fotoInicial}" 
+                alt="${produto.nome}" 
+                style="width: 100%; max-height: 360px; object-fit: cover; border-radius: 8px; cursor: pointer;"
+                title="Clique para ver em tamanho cheio"
+                onclick="window.open(this.src, '_blank')"
+                onerror="this.style.display='none';"
+            >
+            ${miniaturasHTML}
+            <small style="display: block; color: #888; font-size: 11px; margin-top: 6px;">
+                💡 Clique nas fotos para alternar ou na foto principal para ampliar.
+            </small>
+        </div>
+    `;
+
     janela.innerHTML = `
         <div class="modal-content">
             <button class="close-modal">&times;</button>
 
             <h2>${produto.nome}</h2>
 
-            <div class="modal-images">
-                <img src="${imagemPrincipal}" alt="${produto.nome}" onerror="this.style.display='none'">
-                <img src="${imagemSecundaria}" alt="${produto.nome}" onerror="this.style.display='none'">
-            </div>
+            ${galeriaHTML}
 
             <p style="margin-bottom: 10px; color: #666;">Coleção: ${produto.colecao}</p>
 
@@ -860,7 +982,11 @@ function abrirDetalhes(produto) {
 
             ${htmlVariacoes}
 
-            ${temItemDisponivel ? `
+            ${produto.sobEncomenda ? `
+                <button class="btn btn-comprar-whatsapp" style="width: 100%; margin-top: 15px; background-color: #111;">
+                    Solicitar Pedido Sob Encomenda
+                </button>
+            ` : (temItemDisponivel ? `
                 <button class="btn btn-comprar-whatsapp" style="width: 100%; margin-top: 15px;">
                     Comprar pelo WhatsApp
                 </button>
@@ -868,7 +994,7 @@ function abrirDetalhes(produto) {
                 <p style="color: #c71585; font-size: 14px; font-weight: bold; margin-top: 15px;">
                     Produto sem estoque no momento. Clique em "Avise-me" na cor desejada para ser notificada!
                 </p>
-            `}
+            `)}
         </div>
     `;
 
@@ -923,7 +1049,9 @@ function abrirDetalhes(produto) {
             });
 
             let textoMensagem = "";
-            if (itensSelecionados.length > 0) {
+            if (produto.sobEncomenda) {
+                textoMensagem = `Olá! Gostaria de fazer um pedido SOB ENCOMENDA do item *${produto.nome}* no valor de R$ ${produto.preco}.`;
+            } else if (itensSelecionados.length > 0) {
                 textoMensagem = `Olá! Gostaria de comprar *${produto.nome}* (R$ ${produto.preco} cada):\n- ` + itensSelecionados.join("\n- ");
             } else {
                 textoMensagem = `Olá! Gostaria de saber mais sobre o produto *${produto.nome}* no valor de R$ ${produto.preco}.`;
@@ -952,15 +1080,30 @@ function abrirDetalhes(produto) {
 function criarCard(produto) {
 
     const nomeArquivo = nomeDaImagem(produto.nome);
-    const imagem = `images/${nomeArquivo}.jpeg`;
+    const imagem = produto.imagens && produto.imagens.length > 0 ? produto.imagens[0] : `images/${nomeArquivo}.jpeg`;
 
     const card = document.createElement("article");
     card.className = "card";
 
+    let badgeHTML = "";
+    if (produto.esgotado) {
+        badgeHTML = `<span class="promotion-badge" style="background-color: #555;">ESGOTADO</span>`;
+    } else if (produto.sobEncomenda) {
+        badgeHTML = `<span class="promotion-badge" style="background-color: #111;">SOB ENCOMENDA</span>`;
+    } else if (produto.promocao) {
+        badgeHTML = `<span class="promotion-badge">PROMOÇÃO</span>`;
+    }
+
+    let textoBotao = "Ver detalhes";
+    if (produto.esgotado) {
+        textoBotao = "Avise-me quando chegar";
+    } else if (produto.sobEncomenda) {
+        textoBotao = "Encomendar";
+    }
+
     card.innerHTML = `
         <div class="photo">
-            ${produto.promocao ? `<span class="promotion-badge">PROMOÇÃO</span>` : ""}
-            ${produto.esgotado ? `<span class="promotion-badge" style="background-color: #555;">ESGOTADO</span>` : ""}
+            ${badgeHTML}
             <img
                 src="${imagem}"
                 alt="${produto.nome}"
@@ -979,7 +1122,7 @@ function criarCard(produto) {
             `}
 
             <button class="btn details-btn" style="${produto.esgotado ? 'background-color: #888;' : ''}">
-                ${produto.esgotado ? 'Avise-me quando chegar' : 'Ver detalhes'}
+                ${textoBotao}
             </button>
         </div>
     `;
