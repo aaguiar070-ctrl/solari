@@ -951,7 +951,7 @@ function abrirDetalhes(produto) {
                 id="imgDestaqueModal" 
                 src="${fotoInicial}" 
                 alt="${produto.nome}" 
-                style="width: 100%; max-height: 360px; object-fit: cover; border-radius: 8px; cursor: pointer;"
+                style="width: 100%; max-height: 420px; object-fit: contain; background-color: #fafafa; border-radius: 8px; cursor: pointer;"
                 title="Clique para ver em tamanho cheio"
                 onclick="window.open(this.src, '_blank')"
                 onerror="this.style.display='none';"
