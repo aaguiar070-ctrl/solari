@@ -182,7 +182,7 @@ const produtos = [
         tipo: "Colares",
         colecao: "Pink",
         novidade: true,
-        esgotado: false
+        esgotado: true
     },
 
     {
